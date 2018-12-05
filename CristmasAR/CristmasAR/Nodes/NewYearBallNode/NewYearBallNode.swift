@@ -72,6 +72,7 @@ class NewYearBallNode {
         node.geometry?.firstMaterial?.emission.intensity = 0.2
         node.geometry?.firstMaterial?.lightingModel = .physicallyBased
         
+        
         var opacity: CGFloat = 0.2
         for childNode in node.childNodes {
             opacity -= 0.02
