@@ -21,11 +21,39 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7C-ej-9Hb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLG-c0-qAb">
+                                <rect key="frame" x="311" y="603" width="44" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="7Rk-4v-8bk"/>
+                                    <constraint firstAttribute="height" constant="44" id="uNV-wx-Cop"/>
+                                </constraints>
+                                <state key="normal" image="update"/>
+                                <connections>
+                                    <action selector="showHideInfoViewButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gWl-5B-4pX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6f2-ai-Sqx">
+                                <rect key="frame" x="20" y="603" width="44" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Uc6-29-OHC"/>
+                                    <constraint firstAttribute="width" constant="44" id="aZU-tj-7Xh"/>
+                                </constraints>
+                                <state key="normal" image="previous"/>
+                                <connections>
+                                    <action selector="removePreviousNodeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hyy-uU-eHv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JLG-c0-qAb" secondAttribute="bottom" constant="20" id="01g-zo-ABE"/>
                             <constraint firstItem="c7C-ej-9Hb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0tq-x3-rbL"/>
                             <constraint firstItem="c7C-ej-9Hb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="36b-6T-aG4"/>
+                            <constraint firstItem="6f2-ai-Sqx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FKq-TH-Eco"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6f2-ai-Sqx" secondAttribute="bottom" constant="20" id="ICb-tV-Xjm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JLG-c0-qAb" secondAttribute="trailing" constant="20" id="UAa-Gi-jns"/>
                             <constraint firstAttribute="bottom" secondItem="c7C-ej-9Hb" secondAttribute="bottom" id="aZd-hg-T4f"/>
                             <constraint firstItem="c7C-ej-9Hb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pdP-QY-1lc"/>
                         </constraints>
@@ -33,6 +61,8 @@
                     </view>
                     <connections>
                         <outlet property="sceneView" destination="c7C-ej-9Hb" id="kTy-1e-ZkR"/>
+                        <outlet property="showHideInfoViewButton" destination="JLG-c0-qAb" id="fuQ-bM-44a"/>
+                        <outlet property="showHideInfoViewButtonBottomConstraint" destination="01g-zo-ABE" id="yOh-20-9A8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -40,4 +70,8 @@
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="previous" width="50" height="50"/>
+        <image name="update" width="50" height="50"/>
+    </resources>
 </document>

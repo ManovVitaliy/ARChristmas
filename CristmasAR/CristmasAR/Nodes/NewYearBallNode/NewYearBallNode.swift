@@ -30,8 +30,8 @@ class NewYearBallNode {
     private static func addHalo(toNode: SCNNode, startRadius: CGFloat) {
         var rad: CGFloat = startRadius
         
-        for _ in 0...9 {
-            rad += startRadius / 5
+        for _ in 0...19 {
+            rad += startRadius / 10
             let sunHalo = SCNSphere(radius: rad)
             sunHalo.firstMaterial?.diffuse.contents = UIImage(named: "halo")
             sunHalo.firstMaterial?.emission.contents = UIImage(named: "halo")
@@ -45,7 +45,6 @@ class NewYearBallNode {
             sunHaloNode.geometry = sunHalo
             
             toNode.addChildNode(sunHaloNode)
-            
         }
     }
     
@@ -76,12 +75,12 @@ class NewYearBallNode {
         }
         node.geometry?.firstMaterial?.diffuse.contents = color
         node.geometry?.firstMaterial?.emission.contents = color
-        node.geometry?.firstMaterial?.emission.intensity = 0.2
+        node.geometry?.firstMaterial?.emission.intensity = 0.4
         node.geometry?.firstMaterial?.lightingModel = .physicallyBased
         
         var opacity: CGFloat = 0.2
         for childNode in node.childNodes {
-            opacity -= 0.02
+            opacity -= 0.01
             childNode.geometry?.firstMaterial?.diffuse.contents = color
             childNode.geometry?.firstMaterial?.diffuse.intensity = opacity
             childNode.opacity = opacity

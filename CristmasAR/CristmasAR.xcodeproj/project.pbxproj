@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE10554721B81620007B0D8D /* ShowHideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE10554621B81620007B0D8D /* ShowHideView.xib */; };
+		CE10554921B81638007B0D8D /* ShowHideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10554821B81638007B0D8D /* ShowHideView.swift */; };
+		CE10554C21B81795007B0D8D /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10554B21B81795007B0D8D /* CustomCollectionView.swift */; };
 		CE768306219B79CE00054006 /* ARKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE768305219B79CE00054006 /* ARKitExtensions.swift */; };
 		CEFDD0AA219AC38200CE0462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDD0A9219AC38200CE0462 /* AppDelegate.swift */; };
 		CEFDD0AC219AC38200CE0462 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDD0AB219AC38200CE0462 /* ViewController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE10554621B81620007B0D8D /* ShowHideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowHideView.xib; sourceTree = "<group>"; };
+		CE10554821B81638007B0D8D /* ShowHideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHideView.swift; sourceTree = "<group>"; };
+		CE10554B21B81795007B0D8D /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
 		CE768305219B79CE00054006 /* ARKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitExtensions.swift; sourceTree = "<group>"; };
 		CEFDD0A6219AC38200CE0462 /* CristmasAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CristmasAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFDD0A9219AC38200CE0462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +73,32 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		CE10554421B815F3007B0D8D /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				CE10554A21B81755007B0D8D /* CustomCollectionView */,
+				CE10554521B815FC007B0D8D /* ShowHideView */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		CE10554521B815FC007B0D8D /* ShowHideView */ = {
+			isa = PBXGroup;
+			children = (
+				CE10554821B81638007B0D8D /* ShowHideView.swift */,
+				CE10554621B81620007B0D8D /* ShowHideView.xib */,
+			);
+			path = ShowHideView;
+			sourceTree = "<group>";
+		};
+		CE10554A21B81755007B0D8D /* CustomCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CE10554B21B81795007B0D8D /* CustomCollectionView.swift */,
+			);
+			path = CustomCollectionView;
+			sourceTree = "<group>";
+		};
 		CE768303219B799000054006 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +134,7 @@
 		CEFDD0A8219AC38200CE0462 /* CristmasAR */ = {
 			isa = PBXGroup;
 			children = (
+				CE10554421B815F3007B0D8D /* Controls */,
 				CE10554121B80CCD007B0D8D /* Modules */,
 				CE768303219B799000054006 /* Extensions */,
 				CEFDD0BD219B0F9900CE0462 /* Nodes */,
@@ -201,6 +234,7 @@
 				CEFDD0B4219AC38300CE0462 /* LaunchScreen.storyboard in Resources */,
 				CEFDD0BC219ACFB500CE0462 /* art.scnassets in Resources */,
 				CEFDD0B1219AC38300CE0462 /* Assets.xcassets in Resources */,
+				CE10554721B81620007B0D8D /* ShowHideView.xib in Resources */,
 				CEFDD0AF219AC38200CE0462 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,7 +249,9 @@
 				CEFDD0C3219B173300CE0462 /* NewYearBallNode.swift in Sources */,
 				CEFDD0AC219AC38200CE0462 /* ViewController.swift in Sources */,
 				CE768306219B79CE00054006 /* ARKitExtensions.swift in Sources */,
+				CE10554921B81638007B0D8D /* ShowHideView.swift in Sources */,
 				CEFDD0C0219B0FBD00CE0462 /* TirTreeNode.swift in Sources */,
+				CE10554C21B81795007B0D8D /* CustomCollectionView.swift in Sources */,
 				CEFDD0AA219AC38200CE0462 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
