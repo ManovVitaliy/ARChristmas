@@ -21,9 +21,17 @@ class NewYearBallNode {
         ballNode.geometry?.materials.first?.shininess = 0.7
         ballNode.geometry?.materials.first?.lightingModel = .physicallyBased
         ballNode.geometry?.materials.first?.writesToDepthBuffer = false
-        var rad: CGFloat = 0.01
-        for i in 0...9 {
-            rad += 0.002
+        
+        addHalo(toNode: ballNode, startRadius: radius)
+        
+        return ballNode
+    }
+    
+    private static func addHalo(toNode: SCNNode, startRadius: CGFloat) {
+        var rad: CGFloat = startRadius
+        
+        for _ in 0...9 {
+            rad += startRadius / 5
             let sunHalo = SCNSphere(radius: rad)
             sunHalo.firstMaterial?.diffuse.contents = UIImage(named: "halo")
             sunHalo.firstMaterial?.emission.contents = UIImage(named: "halo")
@@ -33,13 +41,11 @@ class NewYearBallNode {
             let sunHaloNode = SCNNode()
             sunHaloNode.opacity = 0.4
             sunHaloNode.name = "sunImported"
-            sunHaloNode.position = ballNode.position
+            sunHaloNode.position = toNode.position
             sunHaloNode.geometry = sunHalo
             
-            ballNode.addChildNode(sunHaloNode)
+            toNode.addChildNode(sunHaloNode)
         }
-        
-        return ballNode
     }
     
     static let changeColor = SCNAction.repeatForever(SCNAction.customAction(duration: 12) { (node, elapsedTime) -> () in
@@ -71,7 +77,6 @@ class NewYearBallNode {
         node.geometry?.firstMaterial?.emission.contents = color
         node.geometry?.firstMaterial?.emission.intensity = 0.2
         node.geometry?.firstMaterial?.lightingModel = .physicallyBased
-        
         
         var opacity: CGFloat = 0.2
         for childNode in node.childNodes {

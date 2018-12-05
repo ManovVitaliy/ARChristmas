@@ -43,6 +43,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE10554121B80CCD007B0D8D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CE10554221B80CDC007B0D8D /* MainModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CE10554221B80CDC007B0D8D /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE10554321B80CE5007B0D8D /* ViewController */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		CE10554321B80CE5007B0D8D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEFDD0AB219AC38200CE0462 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		CE768303219B799000054006 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,10 +102,10 @@
 		CEFDD0A8219AC38200CE0462 /* CristmasAR */ = {
 			isa = PBXGroup;
 			children = (
+				CE10554121B80CCD007B0D8D /* Modules */,
 				CE768303219B799000054006 /* Extensions */,
 				CEFDD0BD219B0F9900CE0462 /* Nodes */,
 				CEFDD0A9219AC38200CE0462 /* AppDelegate.swift */,
-				CEFDD0AB219AC38200CE0462 /* ViewController.swift */,
 				CEFDD0AD219AC38200CE0462 /* Main.storyboard */,
 				CEFDD0BB219ACFB500CE0462 /* art.scnassets */,
 				CEFDD0B0219AC38300CE0462 /* Assets.xcassets */,
