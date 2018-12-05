@@ -45,6 +45,7 @@ class NewYearBallNode {
             sunHaloNode.geometry = sunHalo
             
             toNode.addChildNode(sunHaloNode)
+            
         }
     }
     
